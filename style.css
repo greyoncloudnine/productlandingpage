@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+html {
+    font-family: 'Source Sans Pro', Helvetica;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+/* Typography */
+h1 {
+    font-weight: 400;
+    font-size: 2em;
+}
+
+/* Navigation Bar */
+header {
+    background-color: white;
+    color: grey;
+    font-weight: 500;
+    padding: 20px;
+    min-height: 45px;
+    box-sizing: border-box;
+}   
+
+header a {
+    text-decoration: none;
+    color: #222b37;
+}
+
+header a:hover {
+    color: #646f79;
+}
+
+header .logo a{
+    background-image: url('images/logo.png');
+    background-size: 100px;
+    display: inline-block;
+    height: 45px;   
+    width: 100px;
+    margin-right: 5px;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+header li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+/* General Section */
+section {
+    padding: 20px;
+    color: grey;
+    box-sizing: border-box;
+}
+
+
+/* Product Intro Sign up */
+.mainproduct {
+    background-image: url(images/transparentpng.png),radial-gradient(85% 100%,#646f79 0,#222b37 85%);
+    background-position: center 50px,50%;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    min-height: 500px;
+}
+
+.mainproduct div {
+    margin: 10px auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+.mainproduct h1 {
+    font-size: 3em;
+    font-weight: 200;
+}
+
+.mainproduct form input {
+    width: 80%;
+    padding: 12px 10px;
+    border-radius: 5px;
+    border: 3px solid white;
+    opacity: 0.8;
+}
+
+.mainproduct form input:focus {
+    border: 3px solid grey;
+    opacity: 0.8;
+}
+
+.mainproduct form input[type=submit] {
+    background-color: #796eff;
+    color: white;
+    font-weight: 700;
+    font-size: 0.8em;
+    width: 150px;
+    margin: 15px;
+    border: 0;
+}
+
+.mainproduct form input[type=submit]:hover {
+    background-color: #635ac7;
+}
+
+/* Product Intro Media Queries */
+@media screen and (max-width: 300px){
+    .mainproduct div{
+        width: 100px;
+    }
+    .mainproduct h1 {
+        font-size: 12px;
+    }
+    
+    .mainproduct form input {
+        width: 50%;
+    }
+    
+    .mainproduct form input[type=submit] {
+        width: 50px;
+    }
+}
+
+
+@media screen and (max-width: 730px){
+.mainproduct h1 {
+    font-size: 2.5em;
+}
+
+.mainproduct form input {
+    width: 60%;
+}
+
+.mainproduct form input[type=submit] {
+    width: 100px;
+}
+}
+
+
+
+/* Feature box*/
+.featurebox {
+    display: flex;
+}
+
+.featurebox div {
+    margin: 10px;
+}
+
+/* Feature box media query */
+@media screen and (max-width: 350px){
+    .featurebox div {
+        margin: 5px;
+    }
+    
+}
+
+/* Feature Box Benefits Section */
+.featurebox.pro div {
+    flex-direction: row;    
+}
+
+.probenefits {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 50px;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    display: block;
+}
+
+.probenefits i {
+    font-size: 100px;
+    color: #646f79;
+    display: block;
+    margin-bottom: 18px;
+}
+
+.probenefits h2{
+    font-size: 1.5em;
+    color: #222b37;
+    font-weight: 500;
+}
+
+.probenefits p {
+    font-size: 1em;
+    color: #222b37;
+    line-height: 1.5;
+}
+
+/* Feature Box Benefits Media Queries */
+@media screen and (max-width: 350px){
+    .featurebox.pro {
+        display: block;
+    }
+    .probenefits {
+        padding: 5px;
+    }
+    .probenefits i {
+        font-size: 50px;
+        color: #646f79;
+        display: block;
+        margin-bottom: 18px;
+    }
+}
+
+@media screen and (max-width: 800px){
+.featurebox.pro {
+    display: block;
+}
+}
+
+/* Main Product Box Video Section */
+.mainproductvid {
+    background-image: radial-gradient(85% 100%,#646f79 0,#222b37 85%);
+    height: 600px;
+    padding: 20px;
+}
+
+.mainproduct video {
+    margin: 20px;
+    box-shadow: #222b37 3px 3px 10px;
+    width: 600px;
+}
+
+.mainproductvid h2{
+    font-size: 2em;
+    font-weight: 200;
+}
+
+/* Main Product Box Video Section Media Queries */
+@media screen and (max-width: 730px){
+    .mainproduct video {
+        width: 100%;
+    }
+
+}
+
+
+/* Feature Box Pricing Section */
+.featurebox.pricing {
+    margin: 50px 100px;
+    text-align: center;
+}
+
+.featurebox.pricing div {
+    flex-direction: row;
+    padding: 30px;
+    margin: 0px;
+    border-top: 1px solid grey;
+}
+
+/*Feature Box Pricing Media Query start */
+@media screen and (max-width: 634px){
+    .featurebox.pricing {
+        margin: 5px 5px;
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 865px){
+.featurebox.pricing {
+    margin: 5px 5px;
+}
+}
+/* end */
+
+
+
+.selected {
+    background-color: #f7f7f7;
+}
+
+.featurebox.pricing h3 {
+    font-size: 2em;
+    font-weight: 200;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.featurebox.pricing p {
+    color: grey;
+    font-size: 1em;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+.money {
+    font-size: 3em;
+    color: #646f79;
+    font-weight: 200;
+    display: block;
+    margin: 40px auto;
+}
+
+.featurebox.pricing button {
+    padding: 10px;
+    background-color: transparent;
+    font-size: 1em;
+    color: #796eff;
+    border: 2px solid #796eff;
+    border-radius: 3px;
+}
+
+.featurebox.pricing button:hover {
+    background-color: #796eff;
+    color: #ffffff;
+}
+
+
+.featurebox.pricing button.choose {
+    background-color: #796eff;
+    color: #ffffff;
+}
+
+.featurebox.pricing button.choose:hover {
+    background-color: #635ac7;
+    border: 2px solid ##635ac7;
+}
+
+
+/* Footer */
+footer {
+    background-color: #222b37;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;   
+}
